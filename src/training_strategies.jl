@@ -318,7 +318,7 @@ such that the total number of sampled points is equivalent to the given samples
 
 This training strategy can only be used with ODEs (`NNODE`).
 """
-struct WeightedIntervalTraining{T} <: AbstractGridfreeStrategyy
+struct WeightedIntervalTraining{T} <: AbstractGridfreeStrategy
     weights::Vector{T}
     samples::Int
 end
