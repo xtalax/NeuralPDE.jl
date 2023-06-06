@@ -208,7 +208,7 @@ function SciMLBase.symbolic_discretize(pdesys::PDESystem,
                         x))
                     Float64.(_x) # No ComponentArray GPU support
                 end
-                names = ntuple(i -> ~Symbol.(v.ū)[i], length(chain))
+                names = ntuple(i -> Symbol.(v.ū)[i], length(chain))
                 init_params = ComponentArrays.ComponentArray(NamedTuple{names}(i
                                                                                 for i in x))
             end
