@@ -347,7 +347,7 @@ function (f::Phi{<:Optimisers.Restructure})(x, θ)
 end
 
 function get_u()
-	u = (cord, θ, phi) -> phi(cord, θ)
+	u = (cord, θ, phi) -> phi.(cord, (θ,))
 end
 
 # the method to calculate the derivative
