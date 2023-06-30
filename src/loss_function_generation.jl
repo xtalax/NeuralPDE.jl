@@ -163,7 +163,7 @@ function generate_derivative_rules(term, eqdata, eltypeθ, dummyvars, derivative
         end
     end
     vr = mapreduce(vcat, dvs, init = []) do w
-        @rule w => ufunc(w, coord, θ, phi)(coord, θ)
+        @rule w => ufunc(w, coord, θ, phi)
     end
 
     return [mx; rs; vr]
