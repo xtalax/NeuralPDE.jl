@@ -396,4 +396,4 @@ function numeric_derivative(phi, x, εs, order, θ)
 	end
 end
 # Hacky workaround for metaprogramming with symbolics
-@register_symbolic(numeric_derivative(phi, x, εs, order, θ), true, [], true)
+@register_symbolic(numeric_derivative(phi, x, εs, order, θ), true, [])#, true)
